@@ -1,0 +1,14 @@
+4/22/11
+ - Implemented Extended Markdown from http://michelf.com/projects/php-markdown/
+   (really, all i did was add the file to the git repo)
+ - Setup Intal folder structure
+ - Loaded a XHTML 1.0 STRICT Template into the templates folder to start building with
+ 
+ 
+ 
+ 
+ 
+ Notes and consideration points:
+ * I need to consider what style of HTML i shoot for, HTML 5? XHTML 1.0? 1.1? I think XHTML 1.0 might be
+   best, but i need to find out for sure. I'm pretty sure that markdown produces XHTML 1.0 strict, but i need to be sure.
+   

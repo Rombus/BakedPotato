@@ -1,3 +1,11 @@
+4/26/11 - POC 1
+ - Intial creation of "generator.php" with the following features:
+	* Looks for any text file in the ./input folder (matches any .txt)
+	* Runs text though Markdown
+	* Generates a file in the ./ouput folder with the same name as the text file with the markdown (XHTML) output
+	* Will do this for any number of .txt files in the ./input folder
+	
+
 4/22/11
  - Implemented Extended Markdown from http://michelf.com/projects/php-markdown/
    (really, all i did was add the file to the git repo)

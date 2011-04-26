@@ -1,3 +1,6 @@
+4/26/11
+- Addition of output and input text files to keep the folder stucture proper in git
+
 4/26/11 - POC 1
  - Intial creation of "generator.php" with the following features:
 	* Looks for any text file in the ./input folder (matches any .txt)

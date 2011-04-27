@@ -1,18 +1,25 @@
+4/27/11 - POC 2
+- Modified generator.php to properly generate HTML files
+- Modified generator.php to properly generate a HTML filename
+- Cleaned up and commented code better
+
+
 4/26/11
-- Addition of output and input text files to keep the folder stucture proper in git
+- Addition of output and input text files to keep the folder structure proper in git
+
 
 4/26/11 - POC 1
- - Intial creation of "generator.php" with the following features:
+ - Initial creation of "generator.php" with the following features:
 	* Looks for any text file in the ./input folder (matches any .txt)
 	* Runs text though Markdown
-	* Generates a file in the ./ouput folder with the same name as the text file with the markdown (XHTML) output
+	* Generates a file in the ./output folder with the same name as the text file with the markdown (XHTML) output
 	* Will do this for any number of .txt files in the ./input folder
 	
 
 4/22/11
  - Implemented Extended Markdown from http://michelf.com/projects/php-markdown/
    (really, all i did was add the file to the git repo)
- - Setup Intal folder structure
+ - Setup Initial folder structure
  - Loaded a XHTML 1.0 STRICT Template into the templates folder to start building with
  
  

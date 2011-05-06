@@ -1,3 +1,9 @@
+<Type> Test
+<Status> To Post
+<Title> This is the post Title
+<Tags> These are Tags
+<Slug> slug
+<Markdown>
 Test of Markdown
 ================
 

@@ -1,3 +1,8 @@
+5/6/11 
+- Implmented a post template in the templates folder
+- Modified generator.php to break out tagged data in the beginning of file
+- Modified generator.php to create the HTML document based on the slug
+
 4/27/11 - POC 2
 - Modified generator.php to properly generate HTML files
 - Modified generator.php to properly generate a HTML filename

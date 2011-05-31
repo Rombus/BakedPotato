@@ -38,6 +38,8 @@
 		$input_tags = trim($input_array[3]);
 		$input_slug = trim($input_array[4]);
 		$input_markdown = $input_array[5];
+		$input_time = time();
+		
 		// runs the Markdown script
 		$parsed_html = Markdown($input_markdown);
 		
@@ -48,16 +50,32 @@
 		
 		// Put the parsed_html in between the <body> tags
 		$finished_html = str_replace("<body>" , "<body>\n" . $parsed_html , $template_content );
+		$finished_markdown = "<Type> " . $input_type . "\n";
+		$finished_markdown .= "<Status> " . $input_status . "\n";
+		$finished_markdown .= "<Title> " . $input_title . "\n";
+		$finished_markdown .= "<Tags> " . $input_tags . "\n";
+		$finished_markdown .= "<Slug> " . $input_slug . "\n";
+		$finished_markdown .= "<Time> " . $input_time . "\n";
+		$finished_markdown .= "<Markdown>" . $input_markdown;
 		
-		// For testing, will be labeled something specific, just trying HTML rename
-		$output_filename = $output_dir . $input_slug . '.html';
-		$output_handle = fopen($output_filename, "c");
-		if( fwrite($output_handle, $finished_html) === FALSE) { 
+		// Creates the approprate markdown and text files
+		$output_html_filename = $output_dir . $input_slug . '.html';
+		$output_markdown_filename = $output_dir . $input_slug . '.txt';
+		$output_html_handle = fopen($output_html_filename, "c");
+		$output_markdown_handle = fopen($output_markdown_filename, "c");
+		if( fwrite($output_html_handle, $finished_html) === FALSE) { 
 			echo "Cannot Write to File( $output_filename )";
 			exit;
 		}
-		fclose($output_handle);
-		echo "Success, wrote to file ( $output_filename )";
+		fclose($output_html_handle);
+		echo "Success, wrote to file ( $output_html_filename )";
+
+		if( fwrite($output_markdown_handle, $finished_markdown) === FALSE) { 
+			echo "Cannot Write to File( $output_markdown_filename )";
+			exit;
+		}
+		fclose($output_markdown_handle);
+		echo "Success, wrote to file ( $output_markdown_filename )";
 		}
 }
  ?>

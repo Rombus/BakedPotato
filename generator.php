@@ -49,7 +49,8 @@
 		fclose($template_handle);
 		
 		// Put the parsed_html in between the <body> tags
-		$finished_html = str_replace("<body>" , "<body>\n" . $parsed_html , $template_content );
+		$finished_html = str_replace("<title>" , "<title>" . $input_title , $template_content );
+		$finished_html = str_replace("<body>" , "<body>\n" . $parsed_html , $finished_html );
 		$finished_markdown = "<Type> " . $input_type . "\n";
 		$finished_markdown .= "<Status> " . $input_status . "\n";
 		$finished_markdown .= "<Title> " . $input_title . "\n";

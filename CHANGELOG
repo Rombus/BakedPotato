@@ -1,3 +1,13 @@
+6/3/11
+- Modified XHTML1_STRICT.html to allow for better title support
+- Modified XHTML1_STRICT.html to include character encoding to clear warnings on W3C validation
+- <Title> Tag is now properly used for posts
+- Updated changelog for 5/30/11 update
+
+5/30/11
+- Implemented timestamping
+- Implemented saving of the post as a .txt file in Markdown markup
+
 5/6/11 
 - Implmented a post template in the templates folder
 - Modified generator.php to break out tagged data in the beginning of file
